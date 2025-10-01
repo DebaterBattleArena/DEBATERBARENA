@@ -1,0 +1,64 @@
+/* --- CSS: Base Reset & Global Variables --- */
+:root {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #141414;
+    --bg-darker: #000000;
+    --text-primary: #f0f0f0;
+    --text-secondary: #a0a0a0;
+    --color-accent: #e30613; /* Merah Signature DBA */
+    --color-win: #4CAF50;
+    --color-loss: #f44336;
+    --color-draw: #FFC107;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --transition-fast: 0.2s ease-in-out;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;600;700&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+    background-color: var(--bg-primary);
+    font-family: var(--font-body);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+.container { width: 90%; max-width: 1400px; margin: 0 auto; padding: 0 15px; }
+a { color: var(--color-accent); text-decoration: none; transition: color var(--transition-fast); }
+a:hover { color: #ff3344; }
+h1, h2, h3 { font-family: var(--font-heading); color: var(--text-primary); }
+
+/* Header & Navigasi */
+.main-header {
+    background-color: var(--bg-darker);
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.main-header .container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 2.2rem; font-weight: 900; letter-spacing: 2px; }
+.main-nav a { 
+    margin-left: 35px; 
+    font-size: 1rem; 
+    color: var(--text-secondary); 
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: all var(--transition-fast);
+}
+.main-nav a.active, .main-nav a:hover { 
+    color: var(--text-primary); 
+    border-bottom-color: var(--color-accent);
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--bg-darker);
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    padding: 30px 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
